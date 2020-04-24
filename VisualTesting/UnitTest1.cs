@@ -50,14 +50,14 @@ namespace VisualTesting
             sconf.AddBrowser(1200, 800, BrowserType.FIREFOX);
             sconf.AddBrowser(1200, 800, BrowserType.IE_11);
             sconf.AddBrowser(1200, 800, BrowserType.EDGE);
-            //sconf.AddBrowser(1200, 800, BrowserType.SAFARI);
+            sconf.AddBrowser(1200, 800, BrowserType.SAFARI);
 
-            //sconf.AddDeviceEmulation(DeviceName.iPad, ScreenOrientation.Portrait);
-            //sconf.AddDeviceEmulation(DeviceName.iPad_Pro, ScreenOrientation.Portrait);
-            //sconf.AddDeviceEmulation(DeviceName.iPhone_6_7_8_Plus, ScreenOrientation.Portrait);
-            //sconf.AddDeviceEmulation(DeviceName.iPhone_X, ScreenOrientation.Portrait);
-            //sconf.AddDeviceEmulation(DeviceName.Galaxy_Note_3, ScreenOrientation.Portrait);
-            //sconf.AddDeviceEmulation(DeviceName.Nexus_10, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.iPad, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.iPad_Pro, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.iPhone_6_7_8_Plus, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.iPhone_X, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.Galaxy_Note_3, ScreenOrientation.Portrait);
+            sconf.AddDeviceEmulation(DeviceName.Nexus_10, ScreenOrientation.Portrait);
 
             eyes.SetLogHandler(new StdoutLogHandler());
             
