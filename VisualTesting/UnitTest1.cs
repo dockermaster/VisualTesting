@@ -6,7 +6,6 @@ using Applitools.VisualGrid;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
 using Configuration = Applitools.Selenium.Configuration;
 using ScreenOrientation = Applitools.VisualGrid.ScreenOrientation;
 
@@ -20,7 +19,7 @@ namespace VisualTesting
         public void TestMethod2()
         {
             Eyes eyes;
-            InternetExplorerDriver driver = new InternetExplorerDriver();
+            ChromeDriver driver = new ChromeDriver();
             
             VisualGridRunner runner = null;
 
@@ -117,7 +116,7 @@ namespace VisualTesting
             }
         }
 
-        private static void BreakSite(InternetExplorerDriver driver)
+        private static void BreakSite(ChromeDriver driver)
         {
             
             driver.ExecuteScript("arguments[0].setAttribute('style','color: red')",
