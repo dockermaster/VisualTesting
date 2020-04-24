@@ -61,6 +61,9 @@ namespace VisualTesting
             //sconf.AddDeviceEmulation(DeviceName.Nexus_10, ScreenOrientation.Portrait);
 
             eyes.SetLogHandler(new StdoutLogHandler());
+            
+            eyes.SetViewportSize(1000, 600);
+            
             eyes.SetConfiguration(sconf);
 
             eyes.Open(driver);
