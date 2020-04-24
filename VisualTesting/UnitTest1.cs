@@ -62,7 +62,7 @@ namespace VisualTesting
 
             eyes.SetLogHandler(new StdoutLogHandler());
             
-            eyes.SetViewportSize(1000, 600);
+            sconf.SetViewportSize(1000, 600);
             
             eyes.SetConfiguration(sconf);
 
