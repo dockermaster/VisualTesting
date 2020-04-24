@@ -42,6 +42,8 @@ namespace VisualTesting
             sconf.SetAppName(testName);
 
             sconf.SetTestName(testName);
+            
+            Eyes.ApiKey = Environment.GetEnvironmentVariable("APPLITOOLS_API_KEY");
 
             sconf.SetBatch(new BatchInfo(testName));
 
