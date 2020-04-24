@@ -110,11 +110,11 @@ namespace VisualTesting
             Console.WriteLine("Close connection to Eyes");
             eyes.CloseAsync();
 
-            driver.Quit();
-
             System.Diagnostics.Debug.WriteLine("Waiting for visual test to complete");
             TestResultsSummary results = runner.GetAllTestResults();
             System.Diagnostics.Debug.WriteLine(results);
+
+            driver.Quit();
         }
 
         private static void BreakSite(ChromeDriver driver)
