@@ -37,8 +37,6 @@ namespace VisualTesting
 
             eyes = new Eyes(runner);
 
-            driver = new ChromeDriver();
-
             Configuration sconf = eyes.GetConfiguration();
 
             sconf.SetAppName(testName);
@@ -114,7 +112,7 @@ namespace VisualTesting
             }
         }
 
-        private static void BreakSite(ChromeDriver driver)
+        private static void BreakSite(InternetExplorerDriver driver)
         {
             
             driver.ExecuteScript("arguments[0].setAttribute('style','color: red')",
