@@ -37,7 +37,13 @@ namespace VisualTesting
 
             eyes.ApiKey = Environment.GetEnvironmentVariable("APPLITOOLS_API_KEY");
 
-            sconf.SetBatch(new BatchInfo(testName));
+            var batchName = Environment.GetEnvironmentVariable("APPLITOOLS_BATCH_NAME");
+            var batchId = Environment.GetEnvironmentVariable("APPLITOOLS_BATCH_ID");
+
+            BatchInfo batchInfo = new Applitools.BatchInfo(batchName);
+            batchInfo.Id = batchId;
+
+            sconf.SetBatch(batchInfo);
 
             sconf.AddBrowser(1200, 800, BrowserType.CHROME);
             sconf.AddBrowser(1200, 800, BrowserType.FIREFOX);
